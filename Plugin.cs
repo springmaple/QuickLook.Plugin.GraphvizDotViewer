@@ -30,7 +30,7 @@ namespace QuickLook.Plugin.GraphvizDotViewer
             string errorMessage = null;
             try
             {
-                imageBytes = GraphvizWrapper.RenderImage(path, "png");
+                imageBytes = GraphvizWrapper.RenderImage(path, "dot", "png");
             }
             catch (Exception ex)
             {

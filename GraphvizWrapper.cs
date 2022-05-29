@@ -1,22 +1,35 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace QuickLook.Plugin.GraphvizDotViewer
 {
     public static class GraphvizWrapper
     {
-        public static byte[] RenderImage(string sourceFilePath, string format)
+        private const string DotWrapper = @"graphvizdotviewer_dotwrapper.exe";
+
+        public static byte[] RenderImage(string sourceFilePath, string layout, string format)
         {
+            var assemblyDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            if (assemblyDir == null)
+                throw new Exception("Unable to determine assembly path");
+            var dotWrapper = Path.Combine(assemblyDir, "GraphvizBin", DotWrapper);
+
+            // Need to run exe in temp folder in UWP.
+            var tempDotWrapper = Path.Combine(Path.GetTempPath(), DotWrapper);
+            if (!File.Exists(tempDotWrapper))
+                File.Copy(dotWrapper, tempDotWrapper);
+
             var processStartInfo = new ProcessStartInfo
             {
-                FileName = @"dot.exe",
-                Arguments = $@"-T{format} ""{sourceFilePath}""",
+                FileName = tempDotWrapper,
+                Arguments = $@"-K{layout} -T{format} ""{sourceFilePath}""",
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,
-                CreateNoWindow = true
+                CreateNoWindow = true,
             };
             var process = Process.Start(processStartInfo);
             if (process == null)
