@@ -7,12 +7,12 @@ namespace QuickLook.Plugin.GraphvizDotViewer
 {
     public static class GraphvizWrapper
     {
-        public static byte[] RenderImage(string sourceFilePath, string layout, string format)
+        public static byte[] RenderImage(string sourceFilePath, string format)
         {
             var processStartInfo = new ProcessStartInfo
             {
                 FileName = @"dot.exe",
-                Arguments = $@"-T{format} -K{layout} ""{sourceFilePath}""",
+                Arguments = $@"-T{format} ""{sourceFilePath}""",
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,

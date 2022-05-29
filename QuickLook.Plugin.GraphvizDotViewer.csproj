@@ -95,16 +95,22 @@
         <Page Include="DotPanel.xaml" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="GraphvizBin\ANN.dll">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
       <Content Include="GraphvizBin\cairo.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <Content Include="GraphvizBin\cdt.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+      <Content Include="GraphvizBin\cgraph++.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
       <Content Include="GraphvizBin\cgraph.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\concrt140.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\config6">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <Content Include="GraphvizBin\dot.exe">
@@ -116,10 +122,16 @@
       <Content Include="GraphvizBin\fontconfig.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <Content Include="GraphvizBin\freeglut.dll">
+      <Content Include="GraphvizBin\getopt.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <Content Include="GraphvizBin\getopt.dll">
+      <Content Include="GraphvizBin\glib-2.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\gobject-2.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\gvc++.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <Content Include="GraphvizBin\gvc.dll">
@@ -143,16 +155,25 @@
       <Content Include="GraphvizBin\gvplugin_pango.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <Content Include="GraphvizBin\gvprlib.dll">
+      <Content Include="GraphvizBin\libgd.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <Content Include="GraphvizBin\lab_gamut.dll">
+      <Content Include="GraphvizBin\libharfbuzz-0.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\msvcp140.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\msvcp140_1.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\msvcp140_2.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\msvcp140_codecvt_ids.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <Content Include="GraphvizBin\pango-1.dll">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
-      <Content Include="GraphvizBin\pango2-1.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <Content Include="GraphvizBin\pangocairo-1.dll">
@@ -164,10 +185,13 @@
       <Content Include="GraphvizBin\pangowin32-1.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <Content Include="GraphvizBin\Pathplan.dll">
+      <Content Include="GraphvizBin\pathplan.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <Content Include="GraphvizBin\pixman-1.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Include="GraphvizBin\vcruntime140.dll">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
       <Content Include="GraphvizBin\xdot.dll">
